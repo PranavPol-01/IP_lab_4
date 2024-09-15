@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Order Your Customized T-Shirt</h1>
+        <p>Express yourself with a unique, personalized T-shirt!</p>
+    </header>
+
+    <main>
+        <form id="tshirtForm">
+            <fieldset>
+                <legend>Customize Your T-Shirt</legend>
+                <label for="tagline">Tagline on the Shirt:</label>
+                <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required maxlength="50">
+                
+                <label for="color">Color:</label>
+                <select id="color" name="color" required>
+                    <option value="">Select color</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="">Select size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+                
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Details</legend>
+                <label for="name">Recipient's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Delivery address" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" pattern="[0-9]{10}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Any special instructions" rows="4" maxlength="200"></textarea>
+            </fieldset>
+
+            <button type="button" id="submitBtn">Submit Order</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </main>
+
+    <!-- Modal -->
+    <div id="receiptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Order Confirmation</h2>
+            <div id="receiptDetails"></div>
+            <button id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+    <footer>
+        <p>Thank you for choosing our <strong>Customized T-Shirt</strong> service!</p>
+        <p>
+          For any inquiries, please contact us at
+          <a href="mailto:support@example.com">support@gmail.com</a>
+          or call us at <strong>+91 1234567890</strong>.
+        </p>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
